@@ -8,9 +8,17 @@ from agno.tools.calculator import CalculatorTools
 
 web_agent = Agent(
     name="Web Agent",
+    role="web search agent",
+    tools=[
+        DuckDuckGoTools(),
+        WikipediaTools(),
+        GoogleSearchTools(),
+        YFinanceTools(stock_price=True),
+        CalculatorTools()
+    ],
     model=Gemini(id="gemini-2.0-flash"),
-    tools=[GoogleSearchTools(), WikipediaTools(), DuckDuckGoTools(), YFinanceTools(stock_price=True), CalculatorTools()],
     #instructions=["Always use tools. Always include sources"],
+    #description="You are an assistant, please reply based on the question.",
     show_tool_calls=True,
     markdown=True,
     stream=True,
@@ -20,4 +28,5 @@ web_agent = Agent(
 #web_agent.print_response("What is the stock price of Microsoft and who is their CEO?")
 #web_agent.print_response("What is the latest news on AI?")
 #web_agent.print_response("What is 2^20?")
-web_agent.print_response("What is the total area of USA in square miles and then convert to square kilometers?")
+#web_agent.print_response("What is the total area of USA in square miles and then convert to square kilometers?")
+web_agent.print_response("Who won the India vs New Zealand finals in CT Mar 2025", stream=True)
