@@ -5,7 +5,7 @@ from phi.tools.yfinance import YFinanceTools
 agent = Agent(
     name="Finance Agent",
     model=Gemini(id="gemini-2.0-flash"),
-    #model=Gemini(id="gemini-1.5-flash"),
+    #model=Gemini(id="gemini-1.5-flash"),   # Does not work
     tools=[YFinanceTools(stock_price=True)],
     #instructions=["Always include sources"],
     show_tool_calls=True,

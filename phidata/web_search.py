@@ -21,4 +21,5 @@ web_agent = Agent(
 #web_agent.print_response("What is the stock price of Microsoft and who is their CEO?")
 #web_agent.print_response("What is the latest news on AI?")
 #web_agent.print_response("What is 2^20?")
-web_agent.print_response("What is the total area of USA in square miles and then convert to square kilometers?")
+#web_agent.print_response("What is the total area of USA in square miles and then convert to square kilometers?")
+web_agent.print_response("Show me a recipe for Dubai Chocolate", stream=True)
