@@ -1,3 +1,4 @@
+agno
 annotated-types==0.7.0
 anyio==4.9.0
 beautifulsoup4==4.13.4
@@ -30,6 +31,7 @@ httpx==0.28.1
 idna==3.10
 lxml==5.4.0
 markdown-it-py==3.0.0
+mcp
 mdurl==0.1.2
 multitasking==0.0.11
 numpy==2.2.5
